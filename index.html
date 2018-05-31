@@ -9,7 +9,9 @@
 <body>
 <div id="vue-app">
   <h1>Data binding</h1>
-  <a v-bind:href="google" target="_blank">Google website</a>
+  <a v-bind:href="website" target="_blank">Google website</a> <!-- Use vueks directive to render a link -->
+  <p v-html="htmlWebsiteTag"></p> <!-- Use vuejs directive to render html -->
+  <input type="text" v-bind:value="name">
 </div>
 <script src="app.js"></script>
 </body>
