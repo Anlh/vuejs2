@@ -8,15 +8,9 @@
 </head>
 <body>
 <div id="vue-app">
-    <h1>Events</h1>
-    <p>My age is {{ age }}</p>
-    <button @click="add(1)">Add a Year</button>
-    <button v-on:click="age--">Subtract a Year</button>
-    <button @dblclick="add(10)">Add 10 Years</button> <!-- we can use shorthand notation @ to call an event directive instead of v-on: -->
-
-    <div id="canvas" v-on:mousemove="updateXY">
-        {{x}}, {{y}}
-    </div>
+    <h1>Event modifiers</h1>
+    <a @click.prevent="click" target="_blank" href="http://www.google.pt">Google website</a> <!-- Prevent default action -->
+    <button @click.once="helloWorld">Say hello world!</button> <!-- Just do this action one time -->
 </div>
 <script src="app.js"></script>
 </body>

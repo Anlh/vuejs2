@@ -1,17 +1,14 @@
 new Vue({
     el: '#vue-app',
     data: {
-        age: 27,
-        x: 0,
-        y: 0
+
     },
     methods: {
-        add: function (inc) {
-            this.age += inc;
+        click: function () {
+            alert('The default action from this a link is prevented!');
         },
-        updateXY: function (event) {
-            this.x = event.offsetX;
-            this.y = event.offsetY;
+        helloWorld: function () {
+            alert('Hello World!');
         }
     }
 });
