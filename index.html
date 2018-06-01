@@ -8,9 +8,10 @@
 </head>
 <body>
 <div id="vue-app">
-    <h1>Event modifiers</h1>
-    <a @click.prevent="click" target="_blank" href="http://www.google.pt">Google website</a> <!-- Prevent default action -->
-    <button @click.once="helloWorld">Say hello world!</button> <!-- Just do this action one time -->
+    <h1>Two-way data binding</h1>
+    <label>Type some text</label>
+    <input type="text" v-model="someText"> <!-- Vue has another directive to use two way data binding we just need to pass inside the v-model directive the property we want to update -->
+    <span>{{ someText }}</span>
 </div>
 <script src="app.js"></script>
 </body>

@@ -1,14 +1,11 @@
 new Vue({
     el: '#vue-app',
     data: {
-
+        someText: ''
     },
     methods: {
-        click: function () {
-            alert('The default action from this a link is prevented!');
-        },
-        helloWorld: function () {
-            alert('Hello World!');
+        someTextFn: function (event) {
+            this.someText = event.target.value;
         }
     }
 });
