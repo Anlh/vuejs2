@@ -1,11 +1,28 @@
 new Vue({
     el: '#vue-app',
     data: {
-        someText: ''
+        age: 20,
+        a: 0,
+        b: 0
     },
     methods: {
-        someTextFn: function (event) {
-            this.someText = event.target.value;
+        /*addToA: function () {
+            console.log('addToA');
+            return this.age + this.a;
+        },
+        addToB: function () {
+            console.log('addToB');
+            return this.age + this.b;
+        }*/
+    },
+    computed: { /* The method is only fired when their internal dependencies change */
+        addToA: function () {
+            console.log('addToA');
+            return this.age + this.a;
+        },
+        addToB: function () {
+            console.log('addToB');
+            return this.age + this.b;
         }
     }
 });

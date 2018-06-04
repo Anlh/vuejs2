@@ -8,10 +8,14 @@
 </head>
 <body>
 <div id="vue-app">
-    <h1>Two-way data binding</h1>
-    <label>Type some text</label>
-    <input type="text" v-model="someText"> <!-- Vue has another directive to use two way data binding we just need to pass inside the v-model directive the property we want to update -->
-    <span>{{ someText }}</span>
+    <h1>Computed Properties</h1>
+    <button v-on:click="a++">Add to A</button>
+    <button v-on:click="b++">Add to B</button>
+    <p>A - {{ a }}</p>
+    <p>B - {{ b }}</p>
+    <p>Starting Age: {{age}}</p>
+    <p>Age + A = {{addToA}}</p>
+    <p>Age + B = {{addToB}}</p>
 </div>
 <script src="app.js"></script>
 </body>
