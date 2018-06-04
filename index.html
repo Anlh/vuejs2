@@ -8,12 +8,35 @@
 </head>
 <body>
 <div id="vue-app">
-    <h1>Conditionals</h1>
-    <button v-on:click="error = !error"> Toggle Error</button>
-    <button v-on:click="success = !success"> Toggle Success</button>
-    <p v-if="error"> There has been an error </p>
-    <!--<p v-else-if="success"> Success </p>-->
-    <p v-show="success"> Success </p> <!-- This directive it sets the element to css style display none, maintaining the element on the page  -->
+    <h1>Looping with v-for directive</h1>
+
+    <h2>Loop through the array characters</h2>
+    <ul>
+        <li v-for="character in characters"> {{ character }}</li>
+    </ul>
+
+    <h2>Loop through the array of persons</h2>
+    <ul>
+        <li v-for="(person, index) in persons" v-if="person.name !== 'Helder'"> {{index}}: Person name: {{ person.name }} &dash; Person age: {{ person.age }}</li>
+    </ul>
+
+    <!-- If we don't want to render with a specific template we can use the tag template -->
+    <template v-for="(person, index) in persons">
+        <label v-bind:for="index">Person Name & Person Age</label>
+        <br>
+        <input type="text" v-bind:value="person.name">
+        <br>
+        <input type="number" v-bind:value="person.age">
+        <br>
+    </template>
+    <hr>
+    <!-- To cycle into an array we dont know the keys uphand we nest a for loop inside the array like the code above-->
+    <template v-for="person in persons">
+        <div v-for="(value, key) in person">
+            <p>{{key}} - {{value}}</p>
+        </div>
+    </template>
+
 </div>
 <script src="app.js"></script>
 </body>

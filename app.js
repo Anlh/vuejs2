@@ -1,8 +1,12 @@
 new Vue({
     el: '#vue-app',
     data: {
-        error: false,
-        success: false
+        characters: ['Mario', 'Luigi', 'Dinosaur', 'Naruto'],
+        persons: [
+            {name: 'Helder', age: 27},
+            {name: 'Miguel', age: 20},
+            {name: 'Luis', age: 12}
+        ]
     },
     methods: {
 
