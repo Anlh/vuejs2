@@ -8,14 +8,12 @@
 </head>
 <body>
 <div id="vue-app">
-    <h1>Dynamic css classes</h1>
-    <!--<h2>Example 1 </h2>
-    <div v-bind:class="{available: available}">Available</div>
-    <button @click="toggleAvailableState()">Change available state</button>-->
-    <h2>Example 2</h2>
-    <div v-bind:class="compClasses">Helder</div>
-    <button v-on:click="available = !available">Toggle Avaiable</button>
-    <button v-on:click="nearby = !nearby">Toggle Nearby</button>
+    <h1>Conditionals</h1>
+    <button v-on:click="error = !error"> Toggle Error</button>
+    <button v-on:click="success = !success"> Toggle Success</button>
+    <p v-if="error"> There has been an error </p>
+    <!--<p v-else-if="success"> Success </p>-->
+    <p v-show="success"> Success </p> <!-- This directive it sets the element to css style display none, maintaining the element on the page  -->
 </div>
 <script src="app.js"></script>
 </body>
