@@ -1,6 +1,12 @@
-#canvas {
-    width: 600px;
-    padding: 200px 20px;
-    text-align: center;
-    border: 1px solid #333;
+#vue-app > .available {
+    color: green;
+}
+
+#vue-app > div {
+    color: red;
+}
+
+#vue-app > div.nearby:after {
+    content: 'nearby';
+    margin-left: 10px;
 }

@@ -8,14 +8,14 @@
 </head>
 <body>
 <div id="vue-app">
-    <h1>Computed Properties</h1>
-    <button v-on:click="a++">Add to A</button>
-    <button v-on:click="b++">Add to B</button>
-    <p>A - {{ a }}</p>
-    <p>B - {{ b }}</p>
-    <p>Starting Age: {{age}}</p>
-    <p>Age + A = {{addToA}}</p>
-    <p>Age + B = {{addToB}}</p>
+    <h1>Dynamic css classes</h1>
+    <!--<h2>Example 1 </h2>
+    <div v-bind:class="{available: available}">Available</div>
+    <button @click="toggleAvailableState()">Change available state</button>-->
+    <h2>Example 2</h2>
+    <div v-bind:class="compClasses">Helder</div>
+    <button v-on:click="available = !available">Toggle Avaiable</button>
+    <button v-on:click="nearby = !nearby">Toggle Nearby</button>
 </div>
 <script src="app.js"></script>
 </body>

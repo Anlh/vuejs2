@@ -1,29 +1,21 @@
 new Vue({
     el: '#vue-app',
     data: {
-        age: 20,
-        a: 0,
-        b: 0
+        available: false,
+        nearby: false
     },
     methods: {
-        /*addToA: function () {
-            console.log('addToA');
-            return this.age + this.a;
-        },
-        addToB: function () {
-            console.log('addToB');
-            return this.age + this.b;
-        }*/
+        toggleAvailableState: function () {
+            this.available = !this.available;
+        }
     },
     computed: {
         /* Computed properties are cached based on their dependencies, it's only fired when at least one of this internal dependencies change */
-        addToA: function () {
-            console.log(this.age++);
-            return this.age + this.a;
-        },
-        addToB: function () {
-            console.log('addToB');
-            return this.age + this.b;
+        compClasses: function () {
+            return {
+                available: this.available,
+                nearby: this.nearby
+            };
         }
     }
 });
