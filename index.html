@@ -7,35 +7,11 @@
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 <body>
+<h1>Punchbag game</h1>
 <div id="vue-app">
-    <h1>Looping with v-for directive</h1>
-
-    <h2>Loop through the array characters</h2>
-    <ul>
-        <li v-for="character in characters"> {{ character }}</li>
-    </ul>
-
-    <h2>Loop through the array of persons</h2>
-    <ul>
-        <li v-for="(person, index) in persons" v-if="person.name !== 'Helder'"> {{index}}: Person name: {{ person.name }} &dash; Person age: {{ person.age }}</li>
-    </ul>
-
-    <!-- If we don't want to render with a specific template we can use the tag template -->
-    <template v-for="(person, index) in persons">
-        <label v-bind:for="index">Person Name & Person Age</label>
-        <br>
-        <input type="text" v-bind:value="person.name">
-        <br>
-        <input type="number" v-bind:value="person.age">
-        <br>
-    </template>
-    <hr>
-    <!-- To cycle into an array we dont know the keys uphand we nest a for loop inside the array like the code above-->
-    <template v-for="person in persons">
-        <div v-for="(value, key) in person">
-            <p>{{key}} - {{value}}</p>
-        </div>
-    </template>
+    <!-- Bag image-->
+    <!-- Bag health bar-->
+    <!-- Bag game controls-->
 
 </div>
 <script src="app.js"></script>
