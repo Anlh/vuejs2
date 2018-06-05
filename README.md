@@ -1,2 +1,2 @@
 <h1>Refs in vuejs</h1>
-<p>This is useful to access the properties of dom nodes</p>
+<p>This is useful to access the dom nodes properties</p>
